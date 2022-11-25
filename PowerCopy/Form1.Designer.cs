@@ -33,6 +33,8 @@
             this.DestinationButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.CopyButton = new System.Windows.Forms.Button();
+            this.SourceLabel = new System.Windows.Forms.Label();
+            this.DestinationLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // folderBrowserDialog
@@ -76,11 +78,33 @@
             this.CopyButton.UseVisualStyleBackColor = true;
             this.CopyButton.Click += new System.EventHandler(this.CopyButton_Click);
             // 
+            // SourceLabel
+            // 
+            this.SourceLabel.AutoSize = true;
+            this.SourceLabel.Location = new System.Drawing.Point(9, 47);
+            this.SourceLabel.MaximumSize = new System.Drawing.Size(100, 100);
+            this.SourceLabel.Name = "SourceLabel";
+            this.SourceLabel.Size = new System.Drawing.Size(44, 13);
+            this.SourceLabel.TabIndex = 4;
+            this.SourceLabel.Text = "Source:";
+            // 
+            // DestinationLabel
+            // 
+            this.DestinationLabel.AutoSize = true;
+            this.DestinationLabel.Location = new System.Drawing.Point(277, 47);
+            this.DestinationLabel.MaximumSize = new System.Drawing.Size(100, 100);
+            this.DestinationLabel.Name = "DestinationLabel";
+            this.DestinationLabel.Size = new System.Drawing.Size(63, 13);
+            this.DestinationLabel.TabIndex = 5;
+            this.DestinationLabel.Text = "Destination:";
+            // 
             // PowerCopyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 151);
+            this.Controls.Add(this.DestinationLabel);
+            this.Controls.Add(this.SourceLabel);
             this.Controls.Add(this.CopyButton);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.DestinationButton);
@@ -88,6 +112,7 @@
             this.Name = "PowerCopyForm";
             this.Text = "PowerCopy";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -98,6 +123,8 @@
         private System.Windows.Forms.Button DestinationButton;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button CopyButton;
+        private System.Windows.Forms.Label SourceLabel;
+        private System.Windows.Forms.Label DestinationLabel;
     }
 }
 

@@ -34,7 +34,9 @@ namespace PowerCopy
             DialogResult result = folderBrowserDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
-                sourceDirectory = new DirectoryInfo(folderBrowserDialog.SelectedPath);
+                string path = folderBrowserDialog.SelectedPath;
+                SourceLabel.Text = path;
+                sourceDirectory = new DirectoryInfo(path);
             }        
         }
 
@@ -43,7 +45,9 @@ namespace PowerCopy
             DialogResult result = folderBrowserDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
-                targetDirectory = new DirectoryInfo(folderBrowserDialog.SelectedPath);
+                string path = folderBrowserDialog.SelectedPath;
+                DestinationLabel.Text = path;
+                targetDirectory = new DirectoryInfo(path);
             }
         }
 
