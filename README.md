@@ -4,6 +4,6 @@ Copy one folder to dozens of others. Created to distribute an exam folder to mul
 Steps:
 1. Select a source folder
 2. Select a destination folder*
-3. Hit "Copy"!
+3. Hit "Copy!"
 
 *The destination folder will contain all the folders which the source folder will be copied to.
