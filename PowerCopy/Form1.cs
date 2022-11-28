@@ -63,11 +63,14 @@ namespace PowerCopy
             DialogResult res = MessageBox.Show("Are you sure you want to Copy " + source + " folder to all folders in " + target, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (res == DialogResult.Yes)
             {
+                progressBar.Maximum = targetDirectory.GetDirectories().Length;
                 foreach (DirectoryInfo diTargetSubDir in targetDirectory.GetDirectories())
                 {                 
                     DirectoryInfo subTargetDir = new DirectoryInfo(diTargetSubDir.FullName + "\\" + sourceDirectory.Name);
                     CopyAll(sourceDirectory, subTargetDir);
+                    progressBar.Increment(1);
                 }
+                MessageBox.Show("Done!");
             }
         }
     }

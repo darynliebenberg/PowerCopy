@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PowerCopyForm));
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.SourceButton = new System.Windows.Forms.Button();
             this.DestinationButton = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.CopyButton = new System.Windows.Forms.Button();
             this.SourceLabel = new System.Windows.Forms.Label();
             this.DestinationLabel = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             // folderBrowserDialog
             // 
             this.folderBrowserDialog.RootFolder = System.Environment.SpecialFolder.MyComputer;
+            this.folderBrowserDialog.ShowNewFolderButton = false;
             // 
             // SourceButton
             // 
@@ -61,12 +63,13 @@
             this.DestinationButton.UseVisualStyleBackColor = true;
             this.DestinationButton.Click += new System.EventHandler(this.DestinationButton_Click);
             // 
-            // progressBar1
+            // progressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 116);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(356, 23);
-            this.progressBar1.TabIndex = 2;
+            this.progressBar.Location = new System.Drawing.Point(12, 116);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(356, 23);
+            this.progressBar.Step = 1;
+            this.progressBar.TabIndex = 2;
             // 
             // CopyButton
             // 
@@ -106,9 +109,10 @@
             this.Controls.Add(this.DestinationLabel);
             this.Controls.Add(this.SourceLabel);
             this.Controls.Add(this.CopyButton);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.DestinationButton);
             this.Controls.Add(this.SourceButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PowerCopyForm";
             this.Text = "PowerCopy";
             this.ResumeLayout(false);
@@ -121,7 +125,7 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
         private System.Windows.Forms.Button SourceButton;
         private System.Windows.Forms.Button DestinationButton;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Button CopyButton;
         private System.Windows.Forms.Label SourceLabel;
         private System.Windows.Forms.Label DestinationLabel;
